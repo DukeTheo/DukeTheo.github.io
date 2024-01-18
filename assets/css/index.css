@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #fff;
+  --blue: #00adef;
+  --margin-top: 1em;
+}
+body {
+  color: var(--blue);
+  text-transform: uppercase;
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Generic classes */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mb-1 {
+  margin-bottom: 0.4em;
+}
+.text-center {
+  text-align: center;
+}
+.text-blue {
+  color: var(--blue);
+}
+
+/* Main content */
+.content {
+  background-image: url("../imgs/banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  margin-top: -1em;
+  gap: 1em;
+
+  & .logo {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+  }
+
+  & video {
+    height: 80%;
+    width: 350px;
+    object-fit: contain;
+    background-blend-mode: screen;
+  }
+
+  & span {
+    color: white;
+    font-size: 0.7rem;
+  }
+}
+
+.col-2 {
+  padding: 2em 3em 1em;
+  font-size: 0.6rem;
+
+  & p {
+    color: var(--white);
+  }
+
+  & span {
+    font-size: 0.55rem;
+  }
+
+  & .ring-style {
+    margin-bottom: 1em;
+  }
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: relative;
+  border-radius: 50px;
+  background: #add1fa;
+  height: 6px;
+  margin: 0.5em 0;
+
+  & span {
+    font-size: 0.5rem;
+    font-style: italic;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    color: #fff;
+    animation: moveText 6s linear forwards;
+    z-index: 999;
+  }
+
+  & .progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #eaa648;
+    border-radius: 50px;
+    animation: progressAnimation 6s linear forwards;
+  }
+}
+
+/* Stone description */
+.stone-desc {
+  gap: 1em;
+  margin-top: var(--margin-top);
+
+  & img {
+    width: 100px;
+  }
+}
+.hr-full {
+  width: 100%;
+  height: 0.1px;
+  border: none;
+  background: var(--blue);
+}
+
+/* Stone Details */
+
+.stone-details {
+  margin: 0.5em 0;
+
+  & .stone-detail {
+    width: 50px;
+    height: 50px;
+    border: 0.1px solid #eaa648;
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+
+    & + p {
+      color: var(--blue);
+      font-size: 0.6rem;
+    }
+
+    & .progress-bar-round {
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      background: #444 linear-gradient(to right, transparent 50%, orange 0);
+      border-radius: 50%;
+      position: relative;
+
+      & p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.4rem;
+        z-index: 99;
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        height: 100%;
+        margin-left: 50%;
+        transform-origin: left;
+        border-radius: 0 100% 100% 0/50%;
+        background: orange;
+        transform: rotate(calc((var(--percentage) - 50) * 0.01turn));
+        animation: spinProgressBar 6s forwards linear;
+      }
+
+      &.less::before {
+        background: #444;
+        animation: spinProgressBarLess 6s forwards linear;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 8px;
+        border-radius: 50%;
+        background: #222;
+      }
+    }
+  }
+}
+
+.more-detail {
+  margin-top: var(--margin-top);
+}
+.more-detail p:last-child {
+  color: var(--blue);
+}
+
+/* Comment */
+.comment {
+  text-align: center;
+  margin-top: 0.5em;
+  color: var(--white);
+  padding: 1em 1em 0;
+  position: relative;
+
+  & .header {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    & hr {
+      width: 100%;
+      height: 1px;
+      border-block: none;
+      background: var(--blue);
+    }
+  }
+
+  & h4 {
+    font-size: 0.55rem;
+  }
+
+  & p {
+    font-size: 0.45rem;
+    background: #121b2e;
+    padding: 2em 1em;
+    margin-top: -1em;
+  }
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  padding-bottom: 1em;
+
+  & img {
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+  }
+
+  & span {
+    color: #fff;
+  }
+}
+
+/* Desktop View */
+
+@media (min-width: 768px) {
+  .content {
+    width: 400px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+  body {
+    --margin-top: 4em;
+  }
+  .col-1 {
+    height: 40vh;
+  }
+  .col-2 {
+    padding: 20em 5em 1em;
+  }
+}
+
+/* Pre loader */
+
+#pre-loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  /*height: 100vh;*/
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #121b2e;
+
+  & .loader {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid var(--white);
+    animation: spin infinite 1s linear;
+  }
+
+  & video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+  }
+}
+
+/* Animations */
+
+@keyframes progressAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--percentage);
+  }
+}
+
+@keyframes moveText {
+  from {
+    left: 0;
+  }
+  to {
+    left: var(--percentage);
+  }
+}
+
+@keyframes spinProgressBar {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(calc((var(--percentage) - 50) * 0.01turn));
+  }
+}
+
+@keyframes spinProgressBarLess {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(calc((var(--percentage)) * 0.01turn));
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Content Division */
+.content{
+  transform:translatex(-5px) translatey(50px);
+  background-attachment:fixed;
+  margin-right:586px;
+  top:-50px;
+ }
+ 
+ /* Column 1/12 */
+ .content .col-1{
+  min-height:174px;
+  height:174px;
+  transform:translatex(-3px) translatey(134px);
+  margin-top:0px;
+ }
+ 
+ /* Logo */
+ .content .col-1 img{
+  transform:translatex(13px) translatey(-77px);
+  position:relative;
+  left:0px;
+  top:-23px;
+ }
+ 
+ /* Video */
+ .content .col-1 video{
+  transform:translatex(6px) translatey(-46px);
+  backdrop-filter: brightness(0);
+  min-height:165px;
+  background-size:cover;
+  box-shadow:none;
+ }
+ 
+ /* Column 2/12 */
+ .content .col-2{
+  padding-top:0px;
+  transform:translatex(0px) translatey(31px);
+  position:relative;
+  top:118px;
+  left:7px;
+  margin-right:27px;
+ }
+ 
+ /* Footer */
+ .content .footer{
+  min-height:164px;
+  transform:translatex(28px) translatey(-82px);
+  padding-right:23px;
+  position:relative;
+  top:56px;
+  left:-14px;
+ }
+ 
+ /* Comment */
+ .content .col-2 .comment{
+  width:113% !important;
+ }
+ 
+ /* Comment */
+ .content .comment{
+  left:-8px;
+  padding-top:7px;
+  top:-6px;
+ }
+ 
+ /* Flex around */
+ .content .col-2 .flex-around{
+  width:110% !important;
+ }
+ 
+ /* More detail */
+ .content .more-detail{
+  position:relative;
+  top:-30px;
+  margin-top:5px;
+ }
+ 
+ /* Image */
+ .content .footer img{
+  position:relative;
+  top:95px;
+  left:-30px;
+  width:53px;
+  min-height:23px;
+ }
+ 
+ /* Span Tag */
+ .content .footer span{
+  position:relative;
+  top:90px;
+ }
+ 
+ /* Progress bar */
+ .content .progress-bar{
+  top:4px;
+ }
+ 
+ /* Text center */
+ .content .text-center{
+  position:relative;
+  top:5px;
+  padding-bottom:12px;
+ }
+ 
+ /* Span Tag */
+ .content .col-1 span{
+  position:relative;
+  top:-25px;
+ }
+ 
+ /* Flex col */
+ .content .col-2 > .flex-col{
+  position:relative;
+  top:3px;
+ }
+ 
+ /* Image */
+ .col-2 img{
+  width:62px;
+  height:44px;
+  transform:translatex(-35px) translatey(9px);
+ }
+ 
+ /* Flex around */
+ .content .flex-around{
+  margin-top:6px;
+ }
+ 
+ /* Paragraph */
+ .col-2 .comment p{
+  background-color:rgba(36,53,101,0.34);
+ }
+ 
+ 
