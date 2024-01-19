@@ -649,77 +649,101 @@ body {
 
   /* Content Division */
   .content{
-   left:-8px;
-   margin-right:411px;
+   left:8px;
    transform:translatex(0px) translatey(0px);
-   width:311px;
-   height:750px;
-  }
-  
-  /* Video */
-  .content .col-1 video{
-   width:253px;
-   position:relative;
-   left:1px;
-  }
-  
-  /* Logo */
-  .content .col-1 img{
-   top:20px;
-  }
-  
-  /* Body */
-  body{
-   top:1px;
-   bottom:auto !important;
-   position:relative;
-   height:713px;
+   min-height:641px;
+   height:642px;
   }
   
   /* Column 2/12 */
   .content .col-2{
-   transform:translatex(0px) translatey(33px);
-   top:9px;
-   min-height:459px;
+   top:24px;
+   transform:translatex(0px) translatey(-35px);
+   padding-bottom:0px;
   }
   
-  /* Flex col */
-  .content .col-2 > .flex-col:nth-child(1){
-   top:29px;
+  /* Body */
+  body{
+   height:589px;
+  }
+  
+  /* Stone details */
+  .content .col-2 .stone-details{
+   width:279px !important;
+  }
+  
+  /* Flex around */
+  .content .flex-around{
+   position:relative;
+   top:-1px;
+  }
+  
+  /* Flex around */
+  .content .flex-around:nth-child(6){
+   top:-74px;
+   transform:translatex(0px) translatey(48px);
+  }
+  
+  /* Flex around */
+  .content .flex-around:nth-child(3){
+   top:-7px;
   }
   
   /* Progress bar */
   .content .progress-bar{
-   top:9px;
+   top:0px;
   }
   
   /* Text center */
   .content .text-center{
-   top:7px;
-  }
-  
-  /* Span Tag */
-  .content .footer span{
-   left:-6px;
-  }
-  
-  /* Image */
-  .col-2 .flex-around img{
-   transform:translatex(-41px) translatey(19px);
-   top:-12px;
-   left:3px;
+   top:-4px;
   }
   
   /* Image */
   .col-2 div:nth-child(2) img{
-   top:-39px;
-   left:-21px;
+   top:-68px;
   }
   
- }
- 
- @media (max-width:312px){
- 
-  /* New created breakpoint. */
+  /* Stone details */
+  .content .stone-details{
+   top:-32px;
+  }
+  
+  /* Full */
+  .content .hr-full:nth-child(9){
+   position:relative;
+   top:-36px;
+  }
+  
+  /* Full */
+  .content .hr-full{
+   position:relative;
+   top:-3px;
+  }
+  
+  /* Full */
+  .content .hr-full:nth-child(7){
+   top:-27px;
+  }
+  
+  /* More detail */
+  .content .more-detail{
+   top:-42px !important;
+  }
+  
+  /* More detail */
+  .content .col-2 .more-detail{
+   bottom:auto !important;
+  }
+  
+  /* Comment */
+  .content .comment{
+   top:-58px;
+  }
+  
+  /* Footer */
+  .content .footer{
+   top:-117px;
+  }
   
  }
