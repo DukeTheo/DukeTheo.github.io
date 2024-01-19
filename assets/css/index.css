@@ -520,7 +520,7 @@ body {
  /* Existing styles for desktop view */
 
 /* Mobile View */
-@media (max-width: 767px) {
+@media (max-width: 360px) {
   /* Reset styles or adjust them for smaller screens */
 
   /* Column 1/12 */
@@ -645,105 +645,3 @@ body {
     padding-bottom: 1em;
   }
 }
-@media (max-width:767px){
-
-  /* Content Division */
-  .content{
-   left:8px;
-   transform:translatex(0px) translatey(0px);
-   min-height:641px;
-   height:642px;
-  }
-  
-  /* Column 2/12 */
-  .content .col-2{
-   top:24px;
-   transform:translatex(0px) translatey(-35px);
-   padding-bottom:0px;
-  }
-  
-  /* Body */
-  body{
-   height:589px;
-  }
-  
-  /* Stone details */
-  .content .col-2 .stone-details{
-   width:279px !important;
-  }
-  
-  /* Flex around */
-  .content .flex-around{
-   position:relative;
-   top:-1px;
-  }
-  
-  /* Flex around */
-  .content .flex-around:nth-child(6){
-   top:-74px;
-   transform:translatex(0px) translatey(48px);
-  }
-  
-  /* Flex around */
-  .content .flex-around:nth-child(3){
-   top:-7px;
-  }
-  
-  /* Progress bar */
-  .content .progress-bar{
-   top:0px;
-  }
-  
-  /* Text center */
-  .content .text-center{
-   top:-4px;
-  }
-  
-  /* Image */
-  .col-2 div:nth-child(2) img{
-   top:-68px;
-  }
-  
-  /* Stone details */
-  .content .stone-details{
-   top:-32px;
-  }
-  
-  /* Full */
-  .content .hr-full:nth-child(9){
-   position:relative;
-   top:-36px;
-  }
-  
-  /* Full */
-  .content .hr-full{
-   position:relative;
-   top:-3px;
-  }
-  
-  /* Full */
-  .content .hr-full:nth-child(7){
-   top:-27px;
-  }
-  
-  /* More detail */
-  .content .more-detail{
-   top:-42px !important;
-  }
-  
-  /* More detail */
-  .content .col-2 .more-detail{
-   bottom:auto !important;
-  }
-  
-  /* Comment */
-  .content .comment{
-   top:-58px;
-  }
-  
-  /* Footer */
-  .content .footer{
-   top:-117px;
-  }
-  
- }
