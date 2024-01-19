@@ -260,11 +260,7 @@ body {
   & span {
     color: #fff;
   }
-}
 
-/* Desktop View */
-
-@media (min-width: 768px) {
   .content {
     width: 400px;
     margin: 0 auto;
