@@ -517,131 +517,164 @@ body {
   height:15px;
  }
  
- /* Existing styles for desktop view */
-
-/* Mobile View */
+ /* Mobile View */
 @media (max-width: 360px) {
   /* Reset styles or adjust them for smaller screens */
 
+  /* Content Division */
+  .content {
+    transform: translateX(-5px) translateY(50px);
+    background-attachment: fixed;
+    margin-right: 586px;
+    top: -50px;
+  }
+
   /* Column 1/12 */
   .content .col-1 {
-    min-height: auto;
-    height: auto;
-    transform: none;
-    margin-top: var(--margin-top);
+    min-height: 174px;
+    height: 174px;
+    transform: translateX(-3px) translateY(134px);
+    margin-top: 0px;
   }
 
   /* Logo */
   .content .col-1 img {
-    transform: none;
+    transform: translateX(13px) translateY(-77px);
     position: relative;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: -23px;
   }
 
   /* Video */
   .content .col-1 video {
-    transform: none;
-    backdrop-filter: none;
-    min-height: auto;
-    background-size: auto;
+    transform: translateX(6px) translateY(-46px);
+    backdrop-filter: brightness(0);
+    min-height: 165px;
+    background-size: cover;
     box-shadow: none;
   }
 
   /* Column 2/12 */
   .content .col-2 {
-    padding-top: 1em;
-    transform: none;
+    padding-top: 0px;
+    transform: translateX(0px) translateY(31px);
     position: relative;
-    top: 0;
-    left: 0;
-    margin-right: 0;
+    top: 118px;
+    left: 7px;
+    margin-right: 27px;
   }
 
   /* Footer */
   .content .footer {
-    min-height: auto;
-    transform: none;
-    padding-right: 0;
+    min-height: 164px;
+    transform: translateX(28px) translateY(-82px);
+    padding-right: 23px;
     position: relative;
-    top: 0;
-    left: 0;
+    top: 56px;
+    left: -14px;
   }
 
   /* Comment */
   .content .col-2 .comment {
-    width: 100% !important;
+    width: 113% !important;
   }
 
   /* Comment */
   .content .comment {
-    left: 0;
-    padding-top: 1em;
-    top: 0;
+    left: -8px;
+    padding-top: 7px;
+    top: -6px;
+  }
+
+  /* Flex around */
+  .content .col-2 .flex-around {
+    width: 110% !important;
   }
 
   /* More detail */
   .content .more-detail {
     position: relative;
-    top: 0;
-    margin-top: 1em;
+    top: -30px;
+    margin-top: 5px;
   }
 
   /* Image */
   .content .footer img {
     position: relative;
-    top: 0;
-    left: 0;
-    width: auto;
-    min-height: auto;
+    top: 95px;
+    left: -30px;
+    width: 53px;
+    min-height: 23px;
   }
 
   /* Span Tag */
   .content .footer span {
     position: relative;
-    top: 0;
+    top: 90px;
   }
 
   /* Progress bar */
   .content .progress-bar {
-    top: 0;
+    top: 4px;
   }
 
   /* Text center */
   .content .text-center {
     position: relative;
-    top: 0;
-    padding-bottom: 1em;
+    top: 5px;
+    padding-bottom: 12px;
   }
 
   /* Span Tag */
   .content .col-1 span {
     position: relative;
-    top: 0;
+    top: -25px;
   }
 
   /* Flex col */
   .content .col-2 > .flex-col {
     position: relative;
-    top: 0;
+    top: 3px;
+  }
+
+  /* Image */
+  .col-2 img {
+    width: 62px;
+    height: 44px;
+    transform: translateX(-35px) translateY(9px);
   }
 
   /* Flex around */
   .content .flex-around {
-    margin-top: 1em;
+    margin-top: 6px;
   }
 
   /* Paragraph */
   .col-2 .comment p {
     background-color: rgba(36, 53, 101, 0.34);
   }
-  
-  /* Adjustments for stretching issue */
-  .content {
-    min-height: auto;
+
+  /* Image */
+  .col-2 div:nth-child(2) img {
+    display: inline-block;
+    width: 70px;
+    transform: translateX(200px) translateY(143px);
+    min-height: 56px;
+    top: -51px;
+    left: -1px;
   }
 
-  .content .col-2 {
-    padding-bottom: 1em;
+  /* Image */
+  .col-2 div img {
+    position: relative;
+    top: -7px;
+    left: -2px;
   }
+
+  .content .col-2 > div:nth-child(2) {
+    height: 15px;
+  }
+
+  /* Existing styles for desktop view */
+  /* ... (Copy the styles from the original desktop view styles) ... */
 }
