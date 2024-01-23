@@ -48,6 +48,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 .col-1 {
   display: flex;
