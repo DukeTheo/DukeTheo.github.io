@@ -41,7 +41,7 @@ body {
 /* Main content */
 .content {
   background-image: url("../imgs/banner.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   max-height: 100%;
