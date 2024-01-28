@@ -517,4 +517,12 @@ body {
  .content .col-2 > div:nth-child(2){
   height:15px;
  }
- 
+ @media (max-width:359px){
+
+  /* Column 2/12 */
+  .content .col-2{
+   transform:translatex(0px) translatey(0px);
+   top:151px;
+  }
+  
+ }
