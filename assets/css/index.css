@@ -526,9 +526,10 @@ body {
   }
   
  }
- /* Flex col */
+/* Flex col */
 .content .col-2 > .flex-col:nth-child(1){
-  top:21px;
+  top:34px;
  }
+ 
  
  
