@@ -539,8 +539,7 @@ body {
   top:19px;
  }
  
- @media (min-width:354px){
- 
+
   /* Body */
   body{
    transform:translatex(0px) translatey(0px);
