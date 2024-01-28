@@ -554,4 +554,8 @@ body {
   .col-2 .flex-around img{
    left:10px;
   }
-  
+   /* Column 2/12 */
+ .content .col-2{
+  transform:translatex(0px) translatey(0px);
+  top:151px;
+ }
