@@ -265,7 +265,7 @@ body {
 
 /* Desktop View */
 
-@media (min-width: 768px) {
+@media (min-width: 375px) {
   .content {
     width: 400px;
     margin: 0 auto;
@@ -517,4 +517,15 @@ body {
  .content .col-2 > div:nth-child(2){
   height:15px;
  }
+ /* Flex col */
+.content .col-2 > .flex-col{
+  top:3px;
+ }
+ 
+ /* Flex col */
+ .content .col-2 > .flex-col:nth-child(1){
+  height:27px;
+  top:19px;
+ }
+ 
  
