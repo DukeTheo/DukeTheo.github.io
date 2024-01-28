@@ -517,45 +517,4 @@ body {
  .content .col-2 > div:nth-child(2){
   height:15px;
  }
- /* Flex col */
-.content .col-2 > .flex-col{
-  top:3px;
- }
  
- /* Flex col */
- .content .col-2 > .flex-col:nth-child(1){
-  height:27px;
-  top:19px;
- }
- 
- /* Flex col */
-.content .col-2 > .flex-col{
-  top:3px;
- }
- 
- /* Flex col */
- .content .col-2 > .flex-col:nth-child(1){
-  height:27px;
-  top:19px;
- }
- 
-
-  /* Body */
-  body{
-   transform:translatex(0px) translatey(0px);
-  }
-  
-  /* Video */
-  .content .col-1 video{
-   width:296px;
-  }
-  
-  /* Image */
-  .col-2 .flex-around img{
-   left:10px;
-  }
-   /* Column 2/12 */
- .content .col-2{
-  transform:translatex(0px) translatey(0px);
-  top:151px;
- }
